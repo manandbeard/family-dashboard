@@ -5,8 +5,8 @@ After=network.target
 
 [Service]
 Type=simple
-User=pi
-WorkingDirectory=/home/pi/family-dashboard
+User=nhell
+WorkingDirectory=/home/nhell/family-dashboard
 ExecStart=/usr/bin/npm start
 Restart=always
 RestartSec=10
