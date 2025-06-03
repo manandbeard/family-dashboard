@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Family Dashboard - Raspberry Pi Automated Installation Script
-# Run with: GITHUB_REPO=yourusername/family-dashboard curl -sSL https://raw.githubusercontent.com/yourusername/family-dashboard/main/install-pi.sh | bash
+# Run with: GITHUB_REPO=manandbeard/family-dashboard curl -sSL https://raw.githubusercontent.com/manandbeard/family-dashboard/main/install-pi.sh | bash
 
 set -e
 
@@ -61,7 +61,7 @@ npm_version=$(npm --version)
 print_success "Node.js ${node_version} and npm ${npm_version} installed"
 
 # Create project directory
-PROJECT_DIR="/home/pi/family-dashboard"
+PROJECT_DIR="/home/nhell/family-dashboard"
 print_status "Setting up project directory at ${PROJECT_DIR}..."
 
 if [ -d "$PROJECT_DIR" ]; then
@@ -145,9 +145,9 @@ fi
 
 # Set up autostart for kiosk mode
 print_status "Setting up kiosk mode autostart..."
-mkdir -p /home/pi/.config/autostart
+mkdir -p /home/nhell/.config/autostart
 
-cat > /home/pi/.config/autostart/family-dashboard.desktop << EOF
+cat > /home/nhell/.config/autostart/family-dashboard.desktop << EOF
 [Desktop Entry]
 Type=Application
 Name=Family Dashboard Kiosk
@@ -178,8 +178,8 @@ sudo systemctl disable triggerhappy 2>/dev/null || true
 
 # Create sample photos directory with proper permissions
 print_status "Setting up photos directory..."
-sudo chown -R pi:pi /home/pi/family-dashboard/family-photos
-sudo chmod 755 /home/pi/family-dashboard/family-photos
+sudo chown -R pi:pi /home/nhell/family-dashboard/family-photos
+sudo chmod 755 /home/nhell/family-dashboard/family-photos
 
 print_success "Installation completed!"
 echo ""
