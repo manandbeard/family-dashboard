@@ -75,13 +75,13 @@ cd "$PROJECT_DIR"
 # Download project files from GitHub
 print_status "Downloading Family Dashboard files..."
 if [ -z "$GITHUB_REPO" ]; then
-    echo "Usage: GITHUB_REPO=yourusername/family-dashboard $0"
+    echo "Usage: GITHUB_REPO=manandbeard/family-dashboard $0"
     echo "Or edit this script to set your GitHub repository URL"
     read -p "Enter your GitHub repository (format: username/repo-name): " GITHUB_REPO
 fi
 
 if [ -n "$GITHUB_REPO" ]; then
-    git clone "https://github.com/${GITHUB_REPO}.git" .
+    git clone "https://github.com/manandbeard/family-dashboard.git" .
     print_success "Downloaded files from GitHub repository: ${GITHUB_REPO}"
 else
     print_error "No GitHub repository specified. Exiting."
