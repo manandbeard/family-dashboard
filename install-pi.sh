@@ -75,7 +75,7 @@ cd "$PROJECT_DIR"
 # Download project files from GitHub
 print_status "Downloading Family Dashboard files..."
 if [ -z "$GITHUB_REPO" ]; then
-    echo "Usage: GITHUB_REPO=manandbeard/family-dashboard $0"
+    echo "Usage: GITHUB_REPO=$GITHUB_REPO.git $0"
     echo "Or edit this script to set your GitHub repository URL"
     read -p "Enter your GitHub repository (format: username/repo-name): " GITHUB_REPO
 fi
